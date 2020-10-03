@@ -22,19 +22,19 @@
 public class MyApp : Gtk.Application { 
   public MyApp () {
     Object (
-      application_id: "com.github.gustavonogales.helloVala",
+      application_id: "com.github.gustavonogales.hello-vala",
       flags: ApplicationFlags.FLAGS_NONE
     );
   }
 
   protected override void activate() {
-    var label = new Gtk.Label ("Hello Again World!");
+    var label = new Gtk.Label (_("Hello Again World!"));
     
 
     var main_window = new Gtk.ApplicationWindow (this) {
         default_height = 300,
         default_width = 300,
-        title = "Hello World"
+        title = _("Hello World")
     };
     
     main_window.add (label);
